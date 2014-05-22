@@ -22,15 +22,13 @@ cacheSolve <- function(x, ...) {
 
     inverse <- x$getInverseMatrix()
     
-    #cache not exists
+    #cache not exists it will calculate from solve function, otherwise, it will be return directly.
     if (is.null(inverse)) {
         #calculate the reserse
         data <- x$get()
         inverse <- solve(data, ...)
         x$setInverseMatrix(inverse)    
     }
-    else {
-        message("in cache")
-    }
+   
     inverse
 }
