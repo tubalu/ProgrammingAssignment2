@@ -22,7 +22,7 @@ cacheSolve <- function(x, ...) {
 
     inverse <- x$getInverseMatrix()
     
-    #cache not exists it will calculate from solve function, otherwise, it will be return directly.
+    #cache not exists it will calculated from solve function, otherwise, it will be return directly.
     if (is.null(inverse)) {
         #calculate the reserse
         data <- x$get()
